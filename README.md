@@ -1,32 +1,21 @@
-&#x09;	🛡️ Data Masking \& Tokenization System
-
+🛡️ Data Masking & Tokenization System
 
 
 🔐 Secure Sensitive Data Using Data Masking \& Tokenization
 
-
-
 Protecting personally identifiable information (PII) through masking techniques and secure token generation.
-
 
 
 📖 Overview
 
-
-
-This project implements Data Masking and Data Tokenization techniques to protect sensitive information
-
-&#x20;such as:
+This project implements Data Masking and Data Tokenization techniques to protect sensitive information such as:
 
 * 📧 Email Addresses
 * 🆔 Aadhaar Numbers
 * 📱 Phone Numbers
 * 🔑 Passwords \& Personal Data
 
-
-
 The system provides:
-
 ✅ Data Masking for secure display of sensitive information
 
 ✅ Tokenization using UUID-based tokens
@@ -37,24 +26,15 @@ The system provides:
 
 ✅ JDBC integration with SQLite database
 
-
-
 The project was developed using Java, JDBC, and SQLite as part of a Computer Science Engineering academic project focused on data privacy and security.
-
-
 
 🚀 Features :
 
-
-
 🔒 Data Masking
-
-
 
 Masks sensitive information while maintaining readability.
 
 Examples:
-
 Original Data			Masked Data
 
 shivam@gmail.com		s\*\*\*\*\*\*\*\*\*\*\*m@gmail.com
@@ -63,49 +43,30 @@ shivam@gmail.com		s\*\*\*\*\*\*\*\*\*\*\*m@gmail.com
 
 7261827670			72\*\*\*\*\*\*70
 
-
-
 Implemented in:
-
 * DataMasking.java
-
 
 
 🎟️ Data Tokenization
 
-
-
 Generates unique UUID-based tokens and securely stores mappings inside SQLite.
 
-
-
 Example:
-
 Original Data:
 
 shivam password - 72%eh\*dwd9
-
-
 
 Generated Token:
 
 8155d7e8-2389-46f5-b87b-597e6fc12ea9
 
-
-
 Implemented in:
-
 * DataTokenization.java
-
 
 
 🗄️ SQLite Token Vault
 
-
-
 Creates and manages a secure token storage database.
-
-
 
 Database Schema:
 
@@ -119,70 +80,38 @@ CREATE TABLE tokens (
 
 );
 
-
-
 Implemented in:
-
 * DatabaseSetup.java
 
 
-
 🏗️ System Architecture
-
 ┌───────────────────┐
-
-│  User Input Data                 │
-
+│  User Input Data  │
 └─────────┬─────────┘
-
-&#x20;                       │
-
-&#x20;                       ▼
-
+          │
+          ▼
 ┌───────────────────┐
-
-│ Sensitive Data                     │
-
-│ Identification                      │
-
+│ Sensitive Data    │
+│ Identification    │
 └───────┬─────┬─────┘
-
-&#x20;                  │            │
-
-&#x20;                  │            │
-
-&#x20;                  ▼           ▼
-
-┌─────────────┐  ┌─────────────┐
-
-│ Data                      │  │ Tokenization          │
-
-│ Masking                 │  │ Engine                    │
-
-└──────┬──────┘  └──────┬──────┘
-
-&#x20;                │                                   │
-
-&#x20;                ▼                                  ▼
-
-&#x20;┌────────────────────────┐
-
-&#x20;│ SQLite Token Vault                         │
-
-&#x20;└──────────┬─────────────┘
-
-&#x20;                          ▼
-
-&#x20;┌────────────────────────┐
-
-&#x20;│ Secure Data Access                        │
-
-&#x20;└────────────────────────┘
-
-
+        │     │
+        │     │
+        ▼     ▼
+┌─────────────┐ ┌─────────────┐
+│ Data        │ │ Tokenization│
+│ Masking     │ │ Engine      │
+└──────┬──────┘ └──────┬──────┘
+       │               │
+       ▼               ▼
+ ┌────────────────────────┐
+ │ SQLite Token Vault     │
+ └──────────┬─────────────┘
+            ▼
+ ┌────────────────────────┐
+ │ Secure Data Access     │
+ └────────────────────────┘
 
 The architecture follows a pipeline of sensitive-data detection, masking/tokenization, and secure storage.
-
 
 
 📂 Project Structure
@@ -215,15 +144,15 @@ Data-Masking-Tokenization/
 
 Technology		Purpose
 
-Java				Application Development
+Java				  Application Development
 
-JDBC			Database Connectivity
+JDBC			    Database Connectivity
 
-SQLite			Token Storage
+SQLite			  Token Storage
 
-UUID			Token Generation
+UUID			    Token Generation
 
-SQL				Data Persistence
+SQL				    Data Persistence
 
 
 
